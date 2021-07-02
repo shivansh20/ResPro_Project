@@ -1,0 +1,200 @@
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Signup Page!</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style type="text/css">
+            #form {
+                height:600px;
+                width:400px;
+                box-shadow:1px 1px 6px;
+                border-radius:30px;
+                border:5px solid #4f8d98;
+                text-align:center;
+                background-color:#65c7d0;
+                float:right;
+                margin-right:60px;
+                margin-top:61px;
+            }
+            #img {
+                float:left;
+                margin-top:5px;
+            }
+            #logo {
+                height:120px;
+                width:120px;
+                margin-top:20px;
+            }
+            .sub-box {
+                padding:10px 14px;
+                border-radius:20px;
+                outline:none;
+                border:2px solid #f0b406;
+                background-color:white;
+            }
+            .sub-box:focus {
+                width:230px;
+                border-color:#fb766d;
+            }
+            #name {
+                margin-top:-22px;
+                text-shadow:1px 1px 4px black;
+                color:white;
+            }
+            .icon i {
+                width:30px;
+            }
+            .italic {
+                font-style:italic;
+                font-weight:bold;
+            }
+            #size {
+                font-size:17px;
+            }
+            a {
+                color:black;
+            }
+            #button {
+                padding:10px 28px;
+                border-radius:20px;
+                outline:none;
+                border:2px solid #fb766d;
+                cursor:pointer;
+                background-color:white;
+            }
+            #button:hover {
+                background-color:#feecea;
+            }
+            #name1, #email, #pass1, #pass2 {
+                color:white;
+                text-shadow:1px 1px 4px black;
+                font-weight:bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="img">
+            <img src="{% static 'image/Login.jpg' %}">
+        </div>
+        <div id="form">
+            <img src="{% static 'image/Logo.png' %}" id="logo">
+            <h1 id="name">ResPro</h1>
+            <p class="italic" id="size">The online resume builder you deserve - ResumePro</p>
+            <p class="italic">Interested in making resumes? Sign up now.</p>
+            <form action="/" method="post" onsubmit="return validate()">
+                {% csrf_token %}
+                <div class="icon">
+                    <p>
+                        <i class="fa fa-user" aria-hidden="true"></i><input type="text" placeholder="Username" name="username" class="sub-box" id="user" autocomplete="off">
+                        <br>
+                        <span id="name1"></span>
+                    </p>
+                </div>
+                <div class="icon">
+                    <p>
+                        <i class="fa fa-envelope" aria-hidden="true"></i><input type="text" placeholder="Your email" name="email" class="sub-box" id="mail" autocomplete="off">
+                        <br>
+                        <span id="email"></span>
+                    </p>
+                </div>
+                <div class="icon">
+                    <p>
+                        <i class="fa fa-lock" aria-hidden="true"></i><input type="password" placeholder="Password" name="password" class="sub-box" id="pass" autocomplete="off">
+                        <br>
+                        <span id="pass1"></span>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <input type="submit" value="Signup" id="button">
+                    </p>
+                </div>
+                <p>Registered Successfully?   <a href="{% url 'login' %}" style="color: blue">LogIn</a></p>
+            </form>
+            {% if messages %}
+                <ul style="list-style-type:none; background-color:#4f8d98;"  class="messages">
+                    {% for message in messages %}
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+        </div>
+        <script type="text/javascript">
+            function validate() {
+                var user = document.getElementById("user").value;
+                var mail = document.getElementById("mail").value;
+                var pass = document.getElementById("pass").value;
+                document.getElementById("name1").innerHTML = "";
+                document.getElementById("email").innerHTML = "";
+                document.getElementById("pass1").innerHTML = "";
+                if (user == "") {
+                    document.getElementById("name1").innerHTML = '<i class="fa fa-exclamation" aria-hidden="true">' + "</i>" + "Please fill the username field.";
+                    return false;
+                }
+                if ((user.length < 3) || (user.length > 20)) {
+                    document.getElementById("name1").innerHTML = '<i class="fa fa-exclamation" aria-hidden="true">' + "</i>" +"Username must be between 3 and 20 characters.";
+                    return false;
+                }
+                if (user.indexOf(" ") != -1) {
+                    document.getElementById("name1").innerHTML = '<i class="fa fa-exclamation" aria-hidden="true">' + "</i>" + "White spaces are not allowed.";
+                    return false;
+                }
+                if ((user.search(/[a-z]/) == -1) && user.search(/[A-Z]/) == -1) {
+                    document.getElementById("name1").innerHTML = '<i class="fa fa-exclamation" aria-hidden="true">' + "</i>" + "Username must contain atleast one alphabet.";
+                    return false;
+                }
+                if (mail == "") {
+                    document.getElementById("email").innerHTML = '<i class="fa fa-exclamation" aria-hidden="true">' + "</i>" + "Please fill the email field.";
+                    return false;
+                }
+                if (mail.indexOf("@") == 0) {
+                    document.getElementById("email").innerHTML = '<i class="fa fa-exclamation" aria-hidden="true">' + "</i>" + "Please enter a part followed by '@'.";
+                    return false;
+                }
+                if (((mail.length) - (mail.indexOf(".") + 1)) < 2) {
+                    document.getElementById("email").innerHTML = '<i class="fa fa-exclamation" aria-hidden="true">' + "</i>" + "Please enter a valid email.";
+                    return false;
+                }
+                if (mail.indexOf("@") == -1) {
+                    document.getElementById("email").innerHTML = '<i class="fa fa-exclamation" aria-hidden="true">' + "</i>" + "Please include an '@' in the email.";
+                    return false;
+                }
+                if (((mail.indexOf(".")) - (mail.indexOf("@"))) < 3) {
+                    document.getElementById("email").innerHTML = '<i class="fa fa-exclamation" aria-hidden="true">' + "</i>" + "Please enter a valid email.";
+                    return false;
+                }
+                if (((mail.length) - ((mail.indexOf("@"))+1)) == 0) {
+                    document.getElementById("email").innerHTML = '<i class="fa fa-exclamation" aria-hidden="true">' + "</i>" + "Please enter a part followed by '@'.";
+                    return false;
+                }
+                if (((mail.indexOf("@")) - (mail.indexOf("."))) > 0) {
+                    document.getElementById("email").innerHTML = '<i class="fa fa-exclamation" aria-hidden="true">' + "</i>" + "Please enter a valid email.";
+                    return false;
+                }
+                if (pass == "") {
+                    document.getElementById("pass1").innerHTML = '<i class="fa fa-exclamation" aria-hidddn="true">' + "</i>" + "Please fill the password field."
+                    return false;
+                }
+                if ((pass.length) < 8 || (pass.length) > 20) {
+                    document.getElementById("pass1").innerHTML = '<i class="fa fa-exclamation" aria-hidddn="true">' + "</i>" + "Password must be between 8 and 20 characters."
+                    return false;
+                }
+                if (pass == user) {
+                    document.getElementById("pass1").innerHTML = '<i class="fa fa-exclamation" aria-hidddn="true">' + "</i>" + "Password and username must be distinct."
+                    return false;
+                }
+                if ((!(isNaN(pass)))) {
+                    document.getElementById("pass1").innerHTML = '<i class="fa fa-exclamation" aria-hidddn="true">' + "</i>" + "Password can't be only numeric."
+                    return false;
+                }
+                if ((pass.indexOf(" ")) != -1) {
+                    document.getElementById("pass1").innerHTML = '<i class="fa fa-exclamation" aria-hidddn="true">' + "</i>" + "White spaces are not allowed."
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

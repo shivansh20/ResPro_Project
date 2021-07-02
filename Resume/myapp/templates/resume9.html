@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSE Template4!</title>
+        <style type="text/css">
+            @page {
+            size:A4;
+            }
+            #one {
+                width:36%;
+            }
+            #second {
+                width:64%;
+            }
+            #bg {
+                background-color:#315c3e;
+                margin-left:32px;
+                padding-top:192px;
+                color:white;
+                font-weight:bold;
+                font-size:34px;
+                padding-left:22px;
+                padding-bottom:52px;
+                margin-bottom:38px;
+            }
+            .content {
+                margin-left:56px;
+                font-size:14px;
+                margin-right:14px;
+            }
+            .padding-top {
+                padding-top:-10px;
+            }
+            .padding-top1 {
+                padding-top:-18px;
+            }
+            .margin-top {
+                margin-top:30px;
+            }
+            .margin-top1 {
+                padding-top:60px;
+            }
+            .margin-right {
+                margin-right:46px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <td id="one">
+                <div id="bg">
+                    {{candidate8.name}}
+                </div>
+                <div class="content">
+                    <h1>CONTACT</h1>
+                    <p class="padding-top">Address - {{candidate8.address}}</p>
+                    <p class="padding-top">Phone - {{candidate8.no}}</p>
+                    <p class="padding-top">Email - {{candidate8.email}}</p>
+                    <p class="padding-top">LinkedIn - {{candidate8.lnkdin}}</p>
+                    <h1 class="margin-top">PROFILE</h1>
+                    <p class="padding-top">{{candidate8.aboutme}}</p>
+                    <h1 class="margin-top">ACHIEVEMENTS</h1>
+                    <ul>
+                        <li class="padding-top1">{{candidate8.achievements}}</ul>
+                </div>
+            </td>
+            <td id="second">
+                <div class="content margin-right">
+                    <h1 class="margin-top1">EDUCATION</h1>
+                    <h2 class="padding-top">{{candidate8.instname}}</h2>
+                    <p class="padding-top1">
+                        B.Tech (CE) | {{candidate8.year3}} | {{candidate8.uni}}
+                        <br>
+                        Percentage - {{candidate8.percent3}}
+                    </p>
+                    <h2>{{candidate8.schl2}}</h2>
+                    <p class="padding-top1">
+                        Senior Secondary Certificate | {{candidate8.year2}} | {{candidate8.brd2}}
+                        <br>
+                        Percentage - {{candidate8.percent2}}
+                    </p>
+                    <h2 >{{candidate8.schl1}}</h2>
+                    <p class="padding-top1">
+                        Matriculation | {{candidate8.year1}} | {{candidate8.brd1}}
+                        <br>
+                        Percentage - {{candidate8.percent1}}
+                    </p>
+                    <h1 class="margin-top">PROJECTS</h1>
+                    <h2 class="padding-top">{{candidate8.projname1}} ({{candidate8.projdur1}})</h2>
+                    <p class="padding-top1">{{candidate8.desc1}}</p>
+                    <h2>{{candidate8.projname2}} ({{candidate8.projdur2}})</h2>
+                    <p class="padding-top1">{{candidate8.desc2}}</p>
+                    <h1 class="margin-top">HARD SKILLS</h1>
+                    <ul>
+                        <li class="padding-top1">{{candidate8.beg}}</li>
+                        <li>{{candidate8.suff}}</li>
+                        <li>{{candidate8.prof}}</li>
+                    </ul>
+                    <h1 class="margin-top">TRAININGS</h1>
+                    <h2 class="padding-top">{{candidate8.topic1}} ({{candidate8.date1}} - {{candidate8.date2}})</h2>
+                    <p class="padding-top1">{{candidate8.orgname1}}, {{candidate8.cityname1}} | {{candidate8.dur1}}</p>
+                    <h2>{{candidate8.topic2}} ({{candidate8.date3}} - {{candidate8.date4}})</h2>
+                    <p class="padding-top1">{{candidate8.orgname2}}, {{candidate8.cityname2}} | {{candidate8.dur2}}</p>
+                    <h1 class="margin-top">SOFT SKILLS</h1>
+                    <ul>
+                        <li class="padding-top1">{{candidate8.skill1}}</li>
+                        <li>{{candidate8.skill2}}</li>
+                        <li>{{candidate8.skill3}}</li>
+                    </ul>
+                </div>
+            </td>
+        </table>
+    </body>
+</html>

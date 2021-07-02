@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSE Template1!</title>
+        <style type="text/css">
+            @page {
+            size:A4;
+            margin:1cm;
+            }
+            .border {
+                border-bottom:1px solid #2c659e;
+                padding-bottom:-4px;
+            }
+            .paddingtop {
+                padding-top:15px;
+                border-top:1px solid #2c659e;
+            }
+            .paddingbottom {
+                padding-bottom:-14px;
+            }
+            #right1 {
+                padding-left:15px;
+                margin-left:130px;
+                padding-top:-60px;
+            }
+            #right2 {
+                padding-left:15px;
+                margin-left:130px;
+                padding-top:-64px;
+            }
+            #right3 {
+                padding-left:15px;
+                margin-left:130px;
+                padding-top:-55px;
+            }
+            #border1 {
+                border-right:1px solid #2c659e;
+                margin-right:596px;
+                padding-bottom:12px;
+            }
+            #border2 {
+                border-right:1px solid #2c659e;
+                margin-right:596px;
+                padding-bottom:0px;
+            }
+            #border3 {
+                border-right:1px solid #2c659e;
+                margin-right:596px;
+                padding-bottom:8px;
+                margin-top:18px;
+            }
+            .blankline {
+                padding-bottom:6px;
+            }
+            #namesize {
+                font-size:20px;
+            }
+            .paddingtop1 {
+                padding-top:-12px;
+            }
+            #contentsize {
+                font-size:11px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="contentsize">
+            <h1 id="namesize">{{candidateee1.name}}</h1>
+            <p class="paddingbottom">
+                <b>INFO</b>
+            </p>
+            <p class="paddingtop">
+                    <b>Address: </b>
+                    {{candidateee1.address}}
+            </p>
+            <p class="paddingtop1">
+                <b>Phone:</b>
+                 {{candidateee1.no}}
+            </p>
+            <p class="paddingtop1">
+                <b>Email:</b>
+                {{candidateee1.email}}
+            </p>
+            <p class="paddingtop1">
+                <b>LinkedIn:</b>
+                {{candidateee1.lnkdin}}
+            </p>
+            <p class="paddingbottom">
+                <b>PROFESSIONAL SUMMARY</b>
+            </p>
+            <p class="paddingtop blankline">
+                {{candidateee1.aboutme}}
+            </p>
+            <p class="border blankline">
+                <b>
+                    EDUCATIONAL BACKGROUND
+                </b>
+            </p>
+            <p id="border1">
+                <b>{{candidateee1.year3}}</b>
+                <br>
+                <b>B.Tech (EE)</b>
+            </p>
+            <p id="right1">
+                {{candidateee1.uni}}
+                <br>
+                {{candidateee1.instname}}
+                <br>
+                {{candidateee1.percent3}}
+            </p>
+            <p id="border2">
+                <b>
+                    {{candidateee1.year2}}
+                </b>
+                <br>
+                <b>Senior Secondary Certificate</b>
+            </p>
+            <p id="right2">
+                {{candidateee1.brd2}}
+                <br>
+                {{candidateee1.schl2}}
+                <br>
+                {{candidateee1.percent2}}
+            </p>
+            <p id="border3">
+                <b>
+                    {{candidateee1.year1}}
+                </b>
+                <br>
+                <b>Matriculation</b>
+            </p>
+            <p id="right3">
+                {{candidateee1.brd1}}
+                <br>
+                {{candidateee1.schl1}}
+                <br>
+                {{candidateee1.percent1}}
+            </p>
+            <p class="border blankline">
+                <b>HARD SKILLS</b>
+                <ul>
+                    <li>{{candidateee1.beg}}</li>
+                    <li>{{candidateee1.suff}}</li>
+                    <li class="blankline">{{candidateee1.prof}}</li>
+                </ul>
+            </p>
+            <p class="border blankline">
+                <b>PROJECTS</b>
+                <ul>
+                    <li class="blankline">
+                        <b>{{candidateee1.projname1}} - </b>
+                        <br>
+                        <b>(Duration - {{candidateee1.projdur1}})</b>
+                        <br>
+                        {{candidateee1.desc1}}
+                        <br>
+                    </li>
+                    <li class="blankline">
+                        <b>{{candidateee1.projname2}} - </b>
+                        <br>
+                        <b>(Duration - {{candidateee1.projdur2}})</b>
+                        <br>
+                        {{candidateee1.desc2}}
+                    </li>
+                </ul>
+            </p>
+            <p class="border blankline">
+                <b>TRAININGS</b>
+                <ul>
+                    <li>
+                        Attended {{candidateee1.dur1}} training on “{{candidateee1.topic1}}” at “{{candidateee1.orgname1}}, {{candidateee1.cityname1}}” ({{candidateee1.date1}} to {{candidateee1.date2}}).
+                    </li>
+                    <li class="blankline">
+                        Attended {{candidateee1.dur2}} training on "{{candidateee1.topic2}}" at "{{candidateee1.orgname2}}, {{candidateee1.cityname2}}" ({{candidateee1.date3}} to {{candidateee1.date4}}).
+                    </li>
+                </ul>
+            </p>
+            <p class="border blankline">
+                <b>SOFT SKILLS</b>
+                <ul>
+                    <li>{{candidateee1.skill1}}</li>
+                    <li>{{candidateee1.skill2}}</li>
+                    <li>{{candidateee1.skill3}}</li>
+                </ul>
+            </p>
+            <p class="border blankline">
+                <b>ACHIEVEMENTS</b>
+                <ul>{{candidateee1.achievements}}</ul>
+            </p>
+        </div>
+    </body>
+</html>

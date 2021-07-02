@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CE Template2!</title>
+        <style type="text/css">
+            @page {
+            size:A4;
+            }
+            #colouredbg {
+                background-color:#2c659e;
+                color:white;
+                padding-top:30px;
+                padding-left:39px;
+                padding-right:41px;
+                width:34%;
+                height:1121px;
+            }
+            #image {
+                width:194px;
+                height:180px;
+            }
+            #border {
+                padding:0px;
+                border:2px solid black;
+            }
+            #info {
+                padding:16px 4px 4px 4px;
+                font-size:14px;
+                font-weight:bold;
+            }
+            .heading1 {
+                padding-left:3px;
+                padding-top:9px;
+                padding-bottom:-3px;
+            }
+            .heading2 {
+                padding-top:10px;
+            }
+            .heading3 {
+                background-color:#f1f1f1;
+                font-size:15px;
+                padding:9px;
+                padding-bottom:-2px;
+                border-left:6px solid orange;
+                margin-left:16px;
+            }
+            .para1 {
+                padding-left:0px;
+                padding-right:6px;
+                padding-top:0px;
+                padding-bottom:9px;
+                font-size:12px;
+            }
+            .para2 {
+                padding-top:-10px;
+                font-size:14px;
+            }
+            .para3 {
+                padding-left:0px;
+                padding-right:6px;
+                padding-top:-8px;
+                padding-bottom:0px;
+                font-size:12px;
+            }
+            #social {
+                padding-left:3px;
+                padding-top:0px;
+                padding-bottom:-4px;
+            }
+            #whitebg1 {
+                padding-top:0px;
+                padding-left:16px;
+                padding-right:16px;
+                width:22%;
+            }
+            #name {
+                font-size:42px;
+                padding-left:36px;
+                padding-top:-28px;
+                padding-bottom:-42px;
+                font-family:monospace;
+            }
+            #whitebg2 {
+                padding-top:149px;
+                padding-right:16px;
+            }
+            .margin-top1 {
+                margin-top:35px;
+            }
+            #margin-top2 {
+                margin-top:77px;
+            }
+            #margin-top3 {
+                margin-top:16px;
+            }
+            #margin-top4 {
+                margin-top:26px;
+            }
+            .margin-left1 {
+                margin-left:14px;
+            }
+            #margin-left2 {
+                margin-left:28px;
+            }
+            #padding-bottom1 {
+                padding-bottom:36px;
+            }
+            #padding-bottom2 {
+                padding-bottom:146px;
+            }
+            .margin-right {
+                margin-right:36px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <td id="colouredbg">
+                <div id="border">
+                   <img src="{{candidate6.profimg.path}}" id="image">
+                </div>
+                <p id="info">
+                    {{candidate6.address}}
+                    <br>
+                    {{candidate6.no}}
+                    <br>
+                    {{candidate6.email}}
+                    <br>
+                </p>
+                <h1 class="heading1">ABOUT ME</h1>
+                <p class="para1">{{candidate6.aboutme}}</p>
+                <h1 class="heading1">SOCIAL</h1>
+                <p class="para1">
+                    <h1 id="social">LinkedIn</h1>
+                    <p class="para3">{{candidate6.lnkdin}}</p>
+                </p>
+                <h1 class="heading1" id="margin-top4">ACHIEVEMENTS</h1>
+                <p class="para1">
+                    {{candidate6.achievements}}</p>
+                <h1 class="heading1">SOFT SKILLS</h1>
+                <p class="para1" id="padding-bottom2">
+                    {{candidate6.skill1}}
+                    <br>
+                    {{candidate6.skill2}}
+                    <br>
+                    {{candidate6.skill3}}
+                </p>
+            </td>
+            <td id="whitebg1">
+                <p id="name">
+                    {{candidate6.name}}</p>
+                <p class="heading3">EDUCATION</p>
+                <h1 class="heading2">Bachelor of Technology in Civil</h1>
+                <p class="para2">{{candidate6.year3}}</p>
+                <h1 class="heading2">Senior Secondary Certificate</h1>
+                <p class="para2">{{candidate6.year2}}</p>
+                <h1 class="heading2">Matriculation</h1>
+                <p class="para2">{{candidate6.year1}}</p>
+                <p class="heading3 margin-top1">PROJECTS</p>
+                <h1 class="heading2">{{candidate6.projname1}}</h1>
+                <p class="para2">{{candidate6.projdur1}}</p>
+                <h1 class="heading2">{{candidate6.projname2}}</h1>
+                <p class="para2">{{candidate6.projdur2}}</p>
+                <p class="heading3 margin-top1">HARD SKILLS</p>
+                <ul class="para2">
+                    <br>
+                    <li>{{candidate6.beg}}</li>
+                    <br>
+                    <li>{{candidate6.suff}}</li>
+                    <br>
+                    <li id="padding-bottom1">{{candidate6.prof}}</li>
+                    <br>
+                </ul>
+            </td>
+            <td id="whitebg2">
+                <h1 class="heading2">{{candidate6.instname}}</h1>
+                <p class="para2">
+                    {{candidate6.uni}}
+                    <br>
+                    {{candidate6.percent3}}
+                </p>
+                <h1 class="heading2">{{candidate6.schl2}}</h1>
+                <p class="para2">
+                    {{candidate6.brd2}}
+                    <br>
+                    {{candidate6.percent2}}
+                </p>
+                <h1 class="heading2 margin-top1">{{candidate6.schl1}}</h1>
+                <p class="para2">
+                    {{candidate6.brd1}}
+                    <br>
+                    {{candidate6.percent1}}
+                </p>
+                <p class="para2" id="margin-top2">{{candidate6.desc1}}</p>
+                <p class="para2" id="margin-top3">{{candidate6.desc2}}</p>
+                <div id="margin-left2">
+                    <p class="heading3 margin-top1 margin-right">TRAININGS ATTENDED</p>
+                    <h1 class="para2 margin-top1 margin-left1 margin-right">{{candidate6.topic1}}</h1>
+                    <p class="para2 margin-left1 margin-right">
+                        {{candidate6.orgname1}}, {{candidate6.cityname1}} ({{candidate6.date1}} - {{candidate6.date2}})
+                        <br>
+                        Duration - {{candidate6.dur2}}
+                    </p>
+                    <h1 class="para2 margin-top1 margin-left1 margin-right">{{candidate6.topic2}}</h1>
+                    <p class="para2 margin-left1 margin-right">
+                        {{candidate6.orgname2}}, {{candidate6.cityname2}} ({{candidate6.date3}} - {{candidate6.date4}})
+                        <br>
+                        Duration - {{candidate6.dur2}}
+                    </p>
+                </div>
+            </td>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CE Template3!</title>
+        <style type="text/css">
+            @page {
+                size:A4;
+            }
+            #bg {
+                background-color:#2c659e;
+                color:white;
+                padding-top:19px;
+                padding-left:18px;
+                padding-bottom:1px;
+                font-size:23px;
+                margin-bottom:1px;
+            }
+            #one {
+                padding:14px 12px;
+                font-size:14px;
+            }
+            #second {
+                background-color:#f1f1f1;
+                width:34%;
+                padding:14px 12px;
+                font-size:14px;
+            }
+            .border {
+                border-bottom:1px solid #2c659e;
+                padding-bottom:-10px;
+            }
+            .padding-bottom1 {
+                padding-bottom:-30px;
+            }
+            .padding-bottom2 {
+                padding-bottom:-16px;
+            }
+            #padding-bottom3 {
+                padding-bottom:74px;
+            }
+            #padding-bottom4 {
+                padding-bottom:30px;
+            }
+            #padding-bottom5 {
+                padding-bottom:-10px;
+            }
+            .margin-top1 {
+                margin-top:40px;
+            }
+            #margin-top2 {
+                margin-top:46px;
+            }
+            .margin-top3 {
+                margin-top:36px;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="bg">{{candidateee3.name}}</p>
+        <table>
+            <td id="one">
+                <p id="padding-bottom5">{{candidateee3.aboutme}}</p>
+                <h1 class="border">EDUCATION</h1>
+                <h2 class="padding-bottom1">{{candidateee3.instname}}</h2>
+                <p class="padding-bottom2">
+                    B.Tech (EE) | {{candidateee3.year3}} | {{candidateee3.uni}}
+                    <br>
+                    Percentage - {{candidateee3.percent3}}
+                </p>
+                <h2 class="padding-bottom1">{{candidateee3.schl2}}</h2>
+                <p class="padding-bottom2">
+                    Senior Secondary Certificate | {{candidateee3.year2}} | {{candidateee3.brd2}}
+                    <br>
+                    Percentage - {{candidateee3.percent2}}
+                </p>
+                <h2 class="padding-bottom1">{{candidateee3.schl1}}</h2>
+                <p class="padding-bottom2">
+                    Matriculation | {{candidateee3.year1}} | {{candidateee3.brd1}}
+                    <br>
+                    Percentage - {{candidateee3.percent1}}
+                </p>
+                <h1 class="border margin-top3">TRAININGS</h1>
+                <h2 class="padding-bottom1">{{candidateee3.topic1}}</h2>
+                <p class="padding-bottom2">
+                    {{candidateee3.orgname1}}, {{candidateee3.cityname1}} | {{candidateee3.date1}} - {{candidateee3.date2}}
+                    <br>
+                    Duration - {{candidateee3.dur1}}
+                </p>
+                <h2 class="padding-bottom1">{{candidateee3.topic2}}</h2>
+                <p class="padding-bottom2">
+                    {{candidateee3.orgname2}}, {{candidateee3.cityname2}} | {{candidateee3.date3}} - {{candidateee3.date4}}
+                    <br>
+                    Duration - {{candidateee3.dur2}}
+                </p>
+                <h1 class="border margin-top3">PROJECTS</h1>
+                <h2 class="padding-bottom1">{{candidateee3.projname1}}</h2>
+                <p class="padding-bottom2">
+                    <b>(Duration - {{candidateee3.projdur1}})</b>
+                    <br>
+                    {{candidateee3.desc1}}
+                </p>
+                <h2 class="padding-bottom1">{{candidateee3.projname2}}</h2>
+                <p class="padding-bottom2" id="padding-bottom4">
+                    <b>(Duration - {{candidateee3.projdur2}})</b>
+                    <br>
+                    {{candidateee3.desc2}}
+                </p>
+            </td>
+            <td id="second">
+                <h1 class="border">PERSONAL INFO</h1>
+                <h2 class="padding-bottom1">Address</h2>
+                <p class="padding-bottom2">{{candidateee3.address}}</p>
+                <h2 class="padding-bottom1">Phone</h2>
+                <p class="padding-bottom2">{{candidateee3.no}}</p>
+                <h2 class="padding-bottom1">E-mail</h2>
+                <p class="padding-bottom2">{{candidateee3.email}}</p>
+                <h2 class="padding-bottom1">LinkedIn</h2>
+                {{candidateee3.lnkdin}}
+                <h1 class="border" id="margin-top2">HARD SKILLS</h1>
+                <p class="padding-bottom2">{{candidateee3.hardskill1}}</p>
+                <p class="padding-bottom2">{{candidateee3.hardskill2}}</p>
+                <p class="padding-bottom2">{{candidateee3.hardskill3}}</p>
+                <h1 class="border margin-top1">ACHIEVEMENTS</h1>
+                <p class="padding-bottom2">{{candidateee3.achievements}}</p>
+                <h1 class="border margin-top1">SOFT SKILLS</h1>
+                <p class="padding-bottom2">{{candidateee3.skill1}}</p>
+                <p class="padding-bottom2">{{candidateee3.skill2}}</p>
+                <p id="padding-bottom3">{{candidateee3.skill3}}</p>
+            </td>
+        </table>
+    </body>
+</html>
